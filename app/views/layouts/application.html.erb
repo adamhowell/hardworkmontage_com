@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="<%= class_names("h-full antialiased", "dark": current_user&.dark_theme?) %>" lang="<%= I18n.locale %>">
+  <head>
+    <title>
+      <% if content_for?(:title) %>
+        <%= yield :title %> |
+      <% end %>
+      <%= Jumpstart.config.application_name %>
+    </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= viewport_meta_tag %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+    <%# Be sure to add your own custom favicons %>
+    <%= render "favicons" %>
+    <%= render "payments_dependencies" %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <meta name="turbo-cache-control" content="no-preview">
+    <%= yield :head %>
+  </head>
+  <body class="h-full font-sans antialiased font-normal leading-normal">
+    <div class="main flex flex-col">
+      <div class="bg-slate-100">
+        <header class="max-w-screen-xl mx-auto w-full">
+          <%= render partial: "flash" %>
+          <%= render partial: "navbar" %>
+        </header>
+      </div>
+      <main class="px-3 lg:px-0 h-full">
+        <%= yield %>
+      </main>
+    </div>
+    <%= render partial: "footer" unless turbo_native_app? %>
+    <ninja-keys data-controller="command-palette" hideBreadcrumbs></ninja-keys>
+  </body>
+</html>

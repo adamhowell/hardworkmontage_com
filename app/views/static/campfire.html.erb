@@ -1,0 +1,305 @@
+<% content_for :title, 'Campfire Setup and Development' %>
+
+<div class="bg-red-900 bg-center bg-contain rounded-xl md:rounded-none" style="background-image: url(<%= image_url('bg_hero_campfire.png') %>);">
+  <div class="flex flex-col max-w-screen-xl mx-auto px-5 py-10 text-center md:mb-10 md:py-20">
+    <h1 class="font-black font-header leading-none my-5 text-4xl text-white uppercase md:text-6xl">
+      Campfire Development
+    </h1>
+    <p class="text-white text-xl md:text-2xl">
+      Ready to get started? Jump straight to <a href="#pricing-new" class="font-bold text-white underline hover:text-white">pricing</a>
+    </p>
+  </div>
+</div>
+
+<div class="flex flex-col-reverse max-w-screen-xl mx-auto py-5 md:flex-row md:pb-20 md:py-10">
+  <div class="font-medium prose prose-lg p-5 md:prose-xl md:p-0 md:px-10 md:w-1/2">
+    <h2 class="font-black">
+      What is Campfire?
+    </h2>
+    <p><strong><a href="https://once.com/campfire" target="_blank">Campfire</a> is an installable, self-hosted group chat app from <a href="https://37signals.com/">37Signals</a> (the company behind <a href="https://basecamp.com/">Basecamp</a>).</strong></p>
+    <p>It’s simple, clutter free chat and it comes with the best feature imaginable: <em>no monthly recurring charges.</em></p>
+    <p>With Slack and Teams it can cost tens, hundreds or even – amazingly – thousands of dollars a month forever to chat with your coworkers or your community. That’s crazy!</p>
+    <p>With Campfire you pay once and it’s yours forever. Your app. Your data. One payment. Forever.</p>
+    <p>This makes it not only perfect for both small and large teams, but also growing online communities that can’t afford per user pricing.</p>
+    <p>Hard Work Montage will help you quickly get setup on Campfire with your own custom domain and, if necessary, paywall or other authentication.</p>
+  </div>
+  <div class="flex items-center p-5 md:p-0 md:w-1/2">
+    <%= image_tag('img_campfire_primary.png', class: "rounded-xl shadow-xl w-full md:-mr-20") %>
+  </div>
+</div>
+
+<div class="bg-slate-100 rounded-xl md:py-20 md:rounded-none">
+  <div class="flex flex-col max-w-screen-xl mx-auto md:flex-row">
+    <div class="flex items-center p-5 md:p-0 md:w-1/2">
+      <%= image_tag('img_campfire_secondary.webp', class: "max-w-xl rounded-lg shadow-xl w-full md:-ml-10") %>
+    </div>
+    <div class="font-medium prose prose-lg p-5 md:pt-10 md:pr-10 md:prose-xl md:w-1/2">
+      <h2 class="font-black">
+          We are the leader in Campfire customization
+      </h2>
+      <p><strong>The best thing about Campfire is no monthly recurring charges. The second best thing? It’s fully customizable!</strong></p>
+      <p>When you purchase a license of Campfire you also get the code. And – with the help of Hard Work Montage – you can completely customize the entire app.</p>
+      <p>Hard Work Montage will help you customize your Campfire app to match your brand and your needs, while also continuing to update your Campfire install
+      with the latest updates from 37Signals.</p>
+      <p>Paywall. New features. Extra authentication. Admin area. You name it, we can do it.</p>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto py-10 text-center md:py-20">
+  <h2 class="font-black pb-5 px-5 text-3xl md:p-0 md:pb-16 md:text-4xl">
+    Campfire comes with everything you need
+  </h2>
+
+  <div class="grid grid-cols-2 gap-5 mx-auto p-5 md:p-0 md:gap-10 md:grid-cols-4">
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "message-square", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Live chat
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "slash", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        No recurring fees
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "life-buoy", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Easy onboarding
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "users", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Unlimited users
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "user", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        User profiles
+      </h3>
+    </div>
+
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "search", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Search
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "at-sign", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Notifications
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "smartphone", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Mobile ready
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "monitor", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        <acronym title="Progressive Web App" class="cursor-default">PWA</acronym> support
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "settings", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Customizable
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "code", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Open source
+      </h3>
+    </div>
+    <div class="bg-slate-100 flex flex-col pb-10 pt-6 md:pb-16 md:pt-10 rounded-xl shadow-sm">
+      <div class="flex justify-center">
+        <%= feather_icon "database", size: "40", class: "my-5 text-blue-500" %>
+      </div>
+      <h3 class="font-black text-lg text-slate-700 md:text-2xl">
+        Self hosted
+      </h3>
+    </div>
+  </div>
+</div>
+
+<div class="bg-slate-100 px-5 py-10 rounded-xl md:p-0 md:py-20 md:rounded-none">
+  <div class="max-w-screen-2xl mx-auto">
+    <h2 class="font-black mb-10 text-center text-2xl md:text-4xl" id="pricing-new">
+      Straight-forward pricing
+    </h2>
+
+    <div data-controller="tabs"
+     data-tabs-active-tab-class="bg-white font-bold text-slate-900 hover:text-slate-900 active:text-slate-900 focus:text-slate-900"
+     data-tabs-inactive-tab-class="bg-slate-200 font-medium text-slate-500 hover:text-slate-500 focus:text-slate-500">
+
+      <div class="flex justify-center ml-5">
+        <nav class="flex" aria-label="Tabs">
+            <a href="#pricing-new"
+              id="pricing-new"
+              data-tabs-target="tab"
+              data-action="click->tabs#change:prevent"
+              class="flex items-center justify-center p-5 px-10 rounded-l-full text-base md:text-xl">
+                New Campfire
+            </a>
+            <a href="#pricing-existing"
+              id="pricing-existing"
+              data-tabs-target="tab"
+              data-action="click->tabs#change:prevent"
+              class="whitespace-nowrap p-5 px-10 rounded-r-full text-base md:text-xl">
+                Existing Campfire
+            </a>
+        </nav>
+      </div>
+
+      <div class="hidden pt-10" data-tabs-target="panel">
+        <div class="grid gap-5 md:grid-cols-3">
+          <div>
+            <div class="bg-white flex flex-col py-5 rounded-xl shadow-xl md:py-10">
+              <div class="flex justify-center">
+                <%= feather_icon "message-square", size: "60", class: "my-5 text-slate-500" %>
+              </div>
+              <h3 class="font-black text-2xl text-center md:text-3xl">
+                Install – $1,000
+              </h3>
+              <div class="p-5 pb-10 px-10">
+                <p class="font-medium pb-3 text-slate-700 text-lg md:text-xl">
+                    <strong>Let Hard Work Montage handle your Campfire installation</strong>
+                </p>
+                <ul class="font-medium list-outside ml-5 p-2 text-slate-700 text-base md:text-lg">
+                  <li><strong>Installation:</strong> We install Campfire for you at your custom domain</li>
+                  <li><strong>One year warranty:</strong> We will help with any issues that come up over the next year</li>
+                </ul>
+              </div>
+              <div class="text-center">
+                <%= link_to "Get started", contacts_path("type": "install"),
+                  class: "bg-red-500 block font-black px-10 py-5 rounded-lg text-white text-lg w-full md:inline md:text-2xl md:w-fit hover:text-white" %>
+                <p class="font-medium p-5 pt-8 px-10 pb-10 text-slate-400 text-lg">
+                    1 week engagement
+                </p>
+              </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="bg-white flex flex-col py-5 rounded-xl shadow-xl md:py-10">
+              <div class="flex justify-center">
+                <%= feather_icon "lock", size: "60", class: "my-5 text-slate-500" %>
+              </div>
+              <h3 class="font-black text-2xl text-center md:text-3xl">
+                Paywall install – $3,000
+              </h3>
+              <div class="p-5 pb-10 px-10">
+                <p class="font-medium pb-3 text-slate-700 text-lg md:text-xl">
+                    <strong>Use Hard Work Montage’s community paywall to collect payment for access to your Campfire</strong>
+                </p>
+                <ul class="font-medium list-outside ml-5 p-2 text-slate-700 text-base md:text-lg">
+                  <li><strong>Paywall:</strong> Collect payment and gate access to your Campfire using our community paywall install</li>
+                  <li><strong>Streamlined marketing site:</strong> Home, About, Contact</li>
+                  <li><strong>Authentication:</strong> Signup and login</li>
+                  <li><strong>Payments integration:</strong> Stripe, Braintree, or Paypal</li>
+                  <li>Admin area</li>
+                </ul>
+              </div>
+              <div class="px-5 text-center">
+                <%= link_to "Get started", contacts_path("type": "paywall"),
+                  class: "bg-red-500 block font-black px-10 py-5 rounded-lg text-white text-lg w-full md:inline md:text-2xl md:w-fit hover:text-white" %>
+                <p class="font-medium p-5 pt-8 px-10 pb-10 text-slate-400 text-lg">
+                    2 week engagement
+                </p>
+              </div>
+            </div>
+          </div>
+        
+          <div>
+            <div class="bg-white flex flex-col py-5 rounded-xl shadow-xl md:py-10">
+                <div class="flex font-black items-center justify-center space-x-2 text-slate-500">
+                  <%= feather_icon "layout", size: "60", class: "my-5 text-slate-500" %>
+                </div>
+                <h3 class="font-black text-2xl text-center md:text-3xl">
+                  Custom install – $10,000
+                </h3>
+                <div class="p-5 pb-10 px-10">
+                  <p class="font-medium pb-3 text-slate-700 text-lg md:text-xl">
+                      <strong>Build your own custom Campfire features</strong>
+                  </p>
+                  <ul class="font-medium list-outside	ml-5 p-2 text-slate-700 text-base md:text-lg">
+                    <li><strong>Custom Community:</strong> Build on top of Campfire and create a fully functional, feature rich community</li>
+                    <li><strong>Full marketing site:</strong> Interior pages</li>
+                    <li><strong>Authentication:</strong> Add Oauth sign-in</li>
+                    <li>Customize your admin area</li>
+                  </ul>
+                </div>
+                <div class="px-5 text-center">
+                  <%= link_to "Get started", contacts_path("type": "custom"),
+                    class: "bg-red-500 block font-black px-10 py-5 rounded-lg text-white text-lg w-full md:inline md:text-2xl md:w-fit hover:text-white" %>
+                  <p class="font-medium p-5 pt-8 px-10 pb-10 text-slate-400 text-lg">
+                      1 month engagement
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden pt-10" data-tabs-target="panel">
+        <div class="bg-white flex flex-col max-w-2xl mx-auto py-5 rounded-xl shadow-xl md:py-10">
+          <div class="flex justify-center">
+            <%= feather_icon "calendar", size: "60", class: "my-5 text-slate-500" %>
+          </div>
+          <h3 class="font-black text-2xl text-center md:text-3xl">
+            1 month – $10,000
+          </h3>
+          <div class="p-5 pb-10 px-10">
+            <p class="font-medium pb-3 text-slate-700 text-lg md:text-xl">
+              <strong>A small, dedicated team will work on your current Campfire install</strong>
+            </p>
+            <ul class="font-medium p-2 text-slate-700 text-base md:text-lg">
+              <li>Add new features</li>
+              <li>Achieve new business goals</li>
+              <li>Security updates</li>
+              <li>Optimization</li>
+              <li>Update admin area</li>
+            </ul>
+          </div>
+          <div class="px-5 text-center">
+            <%= link_to "Get started", contacts_path("type": "campfire"),
+              class: "bg-red-500 font-black px-10 py-5 rounded-lg text-white text-xl hover:text-white md:text-2xl" %>
+            <p class="font-medium p-5 pt-8 px-10 pb-10 text-slate-400 text-lg">
+              1 month engagement
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

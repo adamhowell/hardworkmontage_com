@@ -1,0 +1,57 @@
+<div class="py-20">
+  <div class="max-w-screen-xl mx-auto">
+    <div class="max-w-3xl mb-10 mx-auto text-center">
+      <h2 class="font-black mb-5 text-5xl">
+        Become a member
+      </h2>
+      <p class="text-2xl">
+        Pay what you can and still get full access to all of the benefits of The Achieve Mint membership
+      </p>
+    </div>
+    <div class="grid grid-cols-3 gap-5">
+      <div class="bg-white p-10 rounded-lg shadow-lg text-center">
+        <span class="pb-5 text-8xl">
+          🙌🏼
+        </span>
+        <h2 class="font-black leading-tight my-5 text-5xl">
+          Supporter
+        </h2>
+        <p class="text-lg">
+          Previous The Achieve Mint customers get a special discount
+        </p>
+        <% plan = Plan.find_by(name: "Supporter") %>
+        <%= link_to "$19/year", new_subscription_path(plan: plan),
+          class: "bg-primary-500 block font-bold mt-5 px-5 py-3 rounded-lg text-white text-2xl hover:text-white hover:bg-primary-400" %>
+      </div>
+      <div class="bg-white p-10 rounded-lg shadow-lg text-center">
+        <span class="pb-5 text-8xl">
+          👏🏽
+        </span>
+        <h2 class="font-black leading-tight my-5 text-5xl">
+          Advocate
+        </h2>
+        <p class="text-lg">
+          Your support will help The Achieve Mint continue its mission
+        </p>
+        <% plan = Plan.find_by(name: "Advocate") %>
+        <%= link_to "$49/year", new_subscription_path(plan: plan),
+          class: "bg-primary-500 block font-bold mt-5 px-5 py-3 rounded-lg text-white text-2xl hover:text-white hover:bg-primary-400" %>
+      </div>
+      <div class="bg-white p-10 rounded-lg shadow-lg text-center">
+        <span class="pb-5 text-8xl">
+          🙏🏼
+        </span>
+        <h2 class="font-black leading-tight my-5 text-5xl">
+          Benefactor
+        </h2>
+        <p class="text-lg">
+          You’re going above and beyond to support The Achieve Mint
+        </p>
+
+        <% plan = Plan.find_by(name: "Benefactor") %>
+        <%= link_to "$99/year", new_subscription_path(plan: plan),
+          class: "bg-primary-500 block font-bold mt-5 px-5 py-3 rounded-lg text-white text-2xl hover:text-white hover:bg-primary-400" %>
+      </div>
+    </div>
+  </div>
+</div>

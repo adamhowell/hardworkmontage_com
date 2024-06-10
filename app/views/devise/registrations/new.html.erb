@@ -1,0 +1,42 @@
+<% content_for :title, "Sign up" %>
+
+<div class="flex flex-col flex-grow w-full">
+    <div class="pb-8 pt-8 text-center">
+        <h1 class="font-extrabold text-3xl tracking-tight text-slate-900 lg:text-5xl">
+            Sign up
+        </h1>
+    </div>
+</div>
+
+<div class="bg-slate-100 max-w-screen-sm mx-auto p-10 pb-5 rounded-xl w-full">
+  <%= form_with(model: resource, as: resource_name, url: registration_path(resource_name, invite: params[:invite])) do |f| %>
+    <%= render "shared/error_messages", resource: resource %>
+
+    <div class="form-group">
+      <%= f.text_field :name, autocomplete: "name", value: nil, placeholder: "Your name", class: "border-slate-300 p-5 rounded-xl text-xl w-full" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.email_field :email, autocomplete: "email", placeholder: "you@email.com", class: "border-slate-300 p-5 rounded-xl text-xl w-full" %>
+    </div>
+
+    <%= f.time_zone_select :time_zone, nil, { default: browser_time_zone.name }, { class: "hidden select" } %>
+
+    <div class="form-group">
+      <%= invisible_captcha :session_key => :invisible_captcha_timestamp %>
+    </div>
+
+    <div class="form-group hidden">
+      <%= f.check_box :terms_of_service, id: "tos", class: "form-checkbox mr-1", checked: "checked" %>
+      <label for="tos" class="inline-block text-sm"><%= t ".terms_html", terms: link_to("terms of service", terms_path, target: "_blank", class: "btn-link"), privacy: link_to("privacy policy", privacy_path, target: "_blank", class: "btn-link") %></label>
+    </div>
+
+    <div class="form-group">
+      <%= f.button button_text(t('.sign_up'), disable_with: t(".submitting")), class: "bg-blue-500 font-bold p-5 rounded-xl text-xl text-white w-full" %>
+    </div>
+    
+    <div class="form-group text-center">
+      <%= t(".login_html", link: link_to("log in to your account", new_session_path(resource_name), class: "font-semibold")) %>
+    </div>
+  <% end %>
+</div>

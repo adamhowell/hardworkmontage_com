@@ -1,0 +1,19 @@
+<style>
+  figure {
+    z-index: 0;
+  }
+</style>
+
+<% content_for :title, @article.title %>
+
+<div class="mb-20 mx-auto py-10 prose lg:prose-lg lg:prose-xl text-slate-800">
+  <h2 class="font-black text-2xl text-slate-900 mb-4">
+    <%= @article.title %>
+  </h2>
+  <p class="-mt-10 text-slate-500 text-sm">
+      <%= @article.published_at.strftime("%B %d, %Y") %>
+  </p>
+  <div class="font-medium">
+    <%= @article.body %>
+  </div>
+</div>

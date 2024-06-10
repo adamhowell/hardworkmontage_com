@@ -1,0 +1,60 @@
+<% if user_signed_in? %>
+    <div class="border-b border-slate-300 flex-none font-bold p-5 lg:px-10 lg:py-5 text-lg w-full">
+        <%= link_to "Events", events_path %>
+    </div>
+<% end %>
+
+<div class="<%= user_signed_in? ? 'border-b border-slate-200' : 'border border-slate-200 rounded-lg' %> p-10 w-full lg:flex">
+    <div class="flex-grow">
+        <h5 class="font-header mb-5 text-3xl text-slate-600">
+            <%= @formatted_timestamp %>
+        </h5>
+        <h4 class="font-header mb-5 text-5xl">
+            <%= @event.title %>
+        </h4>
+        <p class="flex font-bold mb-5 space-x-2 text-lg">
+            <%= image_tag avatar_url_for(@event.owner), height: 30, width: 30, class: "inline-block rounded-full" %>
+            <span>
+                <%= @event.owner.name %>
+            </span>
+        </p>
+        <div class="font-medium max-w-screen-xl mb-10 text-lg">
+            <%= @event.body %>
+        </div>
+
+        <% if user_signed_in? %>
+            <% if @event.enrolled?(current_user) %>
+                <%= link_to event_path(@event), class: "bg-blue-900 block flex font-bold items-center justify-center px-10 py-5 rounded-full space-x-4 text-white text-xl w-full hover:text-white" do %>
+                    <%= feather_icon "minus-talk", class: "w-8" %>
+                    Unregister from this talk
+                <% end %>
+            <% else %>
+                <%= link_to event_path(@event), class: "bg-blue-900 block flex font-bold items-center justify-center px-10 py-5 rounded-full space-x-4 text-white text-xl w-full hover:text-white" do %>
+                    <%= feather_icon "lock", class: "w-8" %>
+                    Register for this talk
+                <% end %>
+            <% end %>
+        <% else %>
+            <div class="font-medium text-center text-slate-700">
+                <%= link_to new_user_registration_path,
+                    class: "bg-blue-900 block flex font-bold items-center justify-center px-10 py-5 rounded-full space-x-2 text-white text-xl w-full hover:text-white" do %>
+                    <%= feather_icon "lock", class: "w-8" %>
+                    <span>
+                        Become a member to register
+                    </span>
+                <% end %>
+                <p class="pt-3">
+                    Already a member?
+                    <%= link_to new_user_session_path, class: "text-slate-700 underline" do %>
+                        Log in
+                    <% end %>
+                </p>
+            </div>
+        <% end %>
+    </div>
+    <% if @event&.image&.persisted? %>
+        <div class="flex-none">
+            <%= image_tag @event.image, class: "max-h-lg max-w-lg p-5 rounded-lg w-full" %>
+        </div>
+    <% end %>
+</div>

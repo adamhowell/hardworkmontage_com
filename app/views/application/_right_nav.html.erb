@@ -1,0 +1,47 @@
+<%# Place any links for the RIGHT side of the nav bar here. Be sure to add class: "nav-link" to each item for proper spacing. %>
+
+<div class="cursor-pointer md:flex hidden items-center nav-link relative space-x-2" data-controller="toggle" data-action="click->toggle#toggle touch->toggle#toggle">
+    <span>
+        Services
+    </span>
+    <span>
+        <%= feather_icon "chevron-down" %>
+    </span>
+
+    <div class="absolute bg-white border border-slate-200 hidden rounded shadow-xl top-10" data-toggle-target="toggleable">
+        <ul class="list-none p-4">
+            <li><%= nav_link_to "Jumpstart Pro Development", jumpstart_pro_path, class: "nav-link" %></li>
+            <li><%= nav_link_to "Campfire Development", campfire_path, class: "nav-link" %></li>
+        </ul>
+    </div>
+</div>
+
+<%= nav_link_to jumpstart_pro_path, class: "flex nav-link space-x-2 md:hidden" do %>
+    <span class="inline md:hidden">🚀</span>
+    <span>Jumpstart Pro Development</span>
+<% end %>
+
+<%= nav_link_to campfire_path, class: "flex nav-link space-x-2 md:hidden" do %>
+    <span class="inline md:hidden">⛺️</span>
+    <span>Campfire Development</span>
+<% end %>
+
+<%= nav_link_to projects_path, class: "flex nav-link space-x-2" do %>
+    <span class="inline md:hidden">💬</span>
+    <span>Projects</span>
+<% end %>
+
+<%= nav_link_to articles_path, class: "flex nav-link space-x-2" do %>
+    <span class="inline md:hidden">📝</span>
+    <span>Articles</span>
+<% end %>
+
+<%= nav_link_to about_path, class: "flex nav-link space-x-2" do %>
+    <span class="inline md:hidden">👋</span>
+    <span>About</span>
+<% end %>
+
+<%= nav_link_to contacts_path, class: "flex nav-link space-x-2" do %>
+    <span class="inline md:hidden">📫</span>
+    <span>Contact</span>
+<% end %>

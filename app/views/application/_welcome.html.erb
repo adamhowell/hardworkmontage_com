@@ -1,0 +1,101 @@
+<% content_for :title, 'Consultancy and holding company of Adam Howell' %>
+
+<div class="border-b border-t border-slate-300">
+  <div class="align-middle flex items-center max-w-screen-xl mx-auto py-20 transform transition-all">
+    <%= image_tag('blacksmith.gif',
+      class: "block mx-auto h-60 w-60 md:h-96 md:w-96", alt: "Blacksmith working on his craft") %>
+    <div>
+      <h2 class="font-black font-header my-3 text-gray-800 text-4xl md:text-6xl">
+        Hard Work Montage
+      </h2>
+      <p class="mb-3 text-gray-500 text-xl md:text-2xl">
+        <em>noun</em> [hahrd wurk mon-tah-zhiz]
+      <p>
+      <ul class="list-decimal mt-5">
+        <li class="mb-5 ml-5 text-gray-900 text-xl md:text-2xl">
+          A common TV and movie trope where one or more characters is shown working hard at a particular task through a sequence of shots meant to imply time passing.
+        </li>
+        <li class="mb-5 ml-5 text-gray-900 text-xl md:text-2xl">
+          The consultancy and holding company of Adam Howell.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="bg-slate-200">
+  <div class="pt-20 text-center">
+    <div class="font-black pb-4 text-slate-500 text-xl uppercase md:text-2xl">
+      What we specialize in
+    </div>
+    <h2 class="font-black font-header text-gray-800 text-4xl uppercase md:text-6xl">
+      <strong>Consulting products</strong>
+    </h2>
+  </div>
+  <div class="max-w-screen-xl mx-auto pb-5 pt-10 md:pb-10 md:px-5">
+    <div class="grid md:grid-cols-2 gap-5 md:gap-10">
+      <div class="bg-white rounded-xl text-center">
+        <div class="flex justify-center p-0 pt-5 md:p-5 md:pt-10 w-full">
+          <%= link_to jumpstart_pro_path do %>
+            <%= image_tag('img_jumpstart.svg', class: "h-20 md:h-40") %>
+          <% end %>
+        </div>
+        <div class="font-black pt-5 text-slate-500 text-lg uppercase md:text-xl">
+          Web and mobile apps
+        </div>
+        <h2 class="font-black leading-tight max-w-lg mx-auto p-5 pt-2 md:pb-10 md:px-10 text-2xl md:text-4xl">
+          Jumpstart Pro Web &amp; Mobile Development
+        </h2>
+        <div class="bg-slate-100 p-5 md:p-10 rounded-b-lg">
+          <%= link_to "Learn more", jumpstart_pro_path,
+            class: "bg-blue-400 block font-black px-5 md:px-10 py-5 rounded-lg text-white text-lg w-full md:inline md:w-fit md:text-2xl hover:text-white focus:text-white active:text-white" %>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl text-center">
+        <span class="flex justify-center p-0 pt-5 md:p-5 md:pt-10 text-8xl">
+          <%= link_to campfire_path do %>
+            <%= image_tag('img_campfire.png', class: "h-20 md:h-40") %>
+          <% end %>
+        </span>
+        <div class="font-black pt-5 text-slate-500 text-lg uppercase md:text-xl">
+          Online communities
+        </div>
+        <h2 class="font-black leading-tight max-w-lg mx-auto p-5 pt-2 md:pb-10 md:px-10 text-2xl md:text-4xl">
+          Campfire Setup &amp; Customization
+        </h2>
+        <div class="bg-slate-100 p-5 md:p-10 rounded-b-lg">
+          <%= link_to "Learn more", campfire_path,
+            class: "bg-red-400 block font-black px-10 py-5 rounded-lg text-white text-lg w-full md:inline md:w-fit md:text-2xl hover:text-white focus:text-white active:text-white" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rounded-xl md:rounded-none">
+  <div class="flex flex-col-reverse max-w-screen-xl mx-auto p-5 md:grid md:grid-cols-2 md:gap-5 md:py-10">
+    <div class="flex flex-col max-w-screen-xl mx-auto p-5 md:mb-10 md:p-0 md:py-10">
+      <div class="font-black text-slate-500 text-xl uppercase md:text-2xl">
+        Jumpstart case study
+      </div>
+      <h2 class="font-black font-header leading-none max-w-4xl mb-4 text-3xl text-slate-900 md:mb-6 md:mt-2 md:text-6xl">
+        Teamstreak
+      </h2>
+      <p class="font-medium leading-tight max-w-4xl mb-10 pr-5 text-slate-500 text-2xl md:text-3xl">
+        Privately and securely track goals and habits
+        with your clients, students, coworkers, and more.
+        Built using Jumpstart Pro.
+      </p>
+      <div>
+        <%= link_to "https://teamstreak.com",
+          class: "bg-slate-900 block font-black px-10 py-5 rounded-lg text-center text-white text-lg w-full md:w-fit md:text-2xl hover:text-white focus:text-white active:text-white", target: "_blank" do %>
+            Visit <span class="hidden md:inline">Teamstreak.com</span>
+        <% end %>
+      </div>
+    </div>
+    <div class="flex items-center md:-mr-20">
+      <%= image_tag('img_teamstreak.png', class: "w-full") %>
+    </div>
+  </div>
+</div>

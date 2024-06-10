@@ -1,0 +1,18 @@
+---
+application_name: Hard Work Montage
+business_name: Hard Work Montage, LLC
+business_address: ''
+domain: hardworkmontage.com
+support_email: adam@hwm.llc
+default_from_email: Adam Howell <adam@hwm.llc>
+background_job_processor: async
+email_provider: postmark
+personal_accounts: true
+apns: false
+fcm: false
+integrations:
+omniauth_providers:
+payment_processors:
+- stripe
+multitenancy:
+gems:

@@ -1,0 +1,51 @@
+<div class="flex flex-col max-w-screen-xl mx-auto mb-20 space-y-10">
+    <div class="bg-blue-950/90 bg-contain bg-[url('/bg_blueprint.png')] flex flex-col-reverse rounded-xl text-white lg:flex-row">
+        <div class="flex items-center justify-center p-5 lg:p-10 lg:w-1/2">
+            <%= image_tag "img_etsy.png", class: "h-[200] object-contain object-right rounded-xl w-96 lg:h-full lg:w-full" %>
+        </div>
+        <div class="p-5 lg:p-20 lg:pl-10 lg:w-1/2">
+            <span class="bg-white/50 font-bold px-5 py-2 rounded-full uppercase">
+                Online course
+            </span>
+            <h1 class="font-header mb-5 text-4xl uppercase lg:my-5 lg:text-7xl">
+                Etsy $100k Blueprint
+            </h1>
+            <p class="font-medium max-w-2xl my-5 text-lg lg:text-2xl">
+                In this 6-week, self directed course – with optional live sessions – you will learn how to:
+            </p>
+            <ul class="font-medium max-w-2xl mt-5 mb-10 text-lg lg:text-2xl">
+                <li>Find a profitable product idea</li>
+                <li>Set up your Etsy shop for success</li>
+                <li>Get your first sale</li>
+                <li>Grow your shop to your first $100k</li>
+            </ul>
+            <%= link_to about_url, class: "bg-white font-bold inline-block px-5 py-3 rounded-full text-slate-900 text-xl hover:text-slate-900" do %>
+                Learn more →
+            <% end %>
+        </div>
+    </div>
+
+    <div class="bg-slate-200 bg-center flex flex-col-reverse rounded-xl text-slate-900 lg:flex-row">
+        <div class="p-5 lg:p-20 lg:w-3/5">
+            <span class="bg-slate-300/50 font-bold px-5 py-2 rounded-full text-slate-900 uppercase">
+                10 Tips to $100k With Etsy
+            </span>
+            <h2 class="font-header mt-8 mb-4 text-4xl lg:text-7xl">
+                Tip #1: It helps if you’re itchy
+            </h2>
+            <p class="font-medium max-w-xl mb-6 mt-4 text-lg lg:text-2xl">
+                When you work on something that solves your own problem,
+                you're not just guessing at what users might need; you're
+                the user, and this firsthand experience can lead to more
+                intuitive and user-friendly solutions.
+            </p>
+            <div class="flex flex-col space-y-2 text-center text-white w-fit">
+                <%= link_to "Get your 10 free tips →", tips_url,
+                    class: "bg-slate-900 font-bold inline-block px-5 py-3 rounded-full text-white text-xl hover:text-white" %>
+            </div>
+        </div>
+        <div class="flex items-center justify-center p-5 lg:p-10 lg:w-2/5">
+            
+        </div>
+    </div>
+</div>

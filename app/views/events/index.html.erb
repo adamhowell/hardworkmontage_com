@@ -1,0 +1,49 @@
+<% provide(:title, "Events") %>
+
+<% if user_signed_in? %>
+    <div class="border-b border-slate-300 flex-none font-bold p-5 lg:px-10 lg:py-5 text-xl w-full">
+        Events
+    </div>
+<% end %>
+
+<div class="flex flex-col space-y-10 <% if user_signed_in? %>lg:p-10<% end %>">
+    <% @events.each do |event| %>
+        <%
+            # Convert to desired timezone, e.g., Eastern Daylight Time (EDT)
+            event_timestamp_in_edt = event.start_time.in_time_zone('Eastern Time (US & Canada)')
+
+            # Format the timestamp
+            formatted_timestamp = event_timestamp_in_edt.strftime("%A, %B #{event_timestamp_in_edt.day.ordinalize} @ %l:%M %p %Z")
+        %>
+
+        <div class="border border-slate-200 bg-slate-100 p-10 rounded-lg w-full">
+            <div class="flex w-full">
+                <div class="flex-grow">
+                    <h5 class="font-header mb-5 text-3xl text-slate-600">
+                        <%= formatted_timestamp %>
+                    </h5>
+                    <h4 class="font-header mb-5 text-5xl">
+                        <%= link_to event.title, event, class: "text-slate-900" %>
+                    </h4>
+                    <p class="flex font-bold mb-5 space-x-2 text-lg">
+                        <%= image_tag avatar_url_for(event.owner), height: 30, width: 30, class: "inline-block rounded-full" %>
+                        <span>
+                            <%= event.owner.name %>
+                        </span>
+                    </p>
+                    <div class="font-medium max-w-screen-xl mb-10 text-lg">
+                        <%= event.body %>
+                    </div>
+                    <%= link_to event_path(event), class: "bg-blue-900 font-bold inline-block px-10 py-5 rounded-full text-white text-xl hover:text-white" do %>
+                        Learn more and register →
+                    <% end %>
+                </div>
+                <% if event&.image&.persisted? %>
+                    <div class="flex-none p-5">
+                        <%= image_tag event.image, class: "h-80 rounded-lg w-80" %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>

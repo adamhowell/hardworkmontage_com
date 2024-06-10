@@ -1,0 +1,14 @@
+<% @resource.login_code = SecureRandom.random_number(100000..999999).to_s %>
+<% @resource.save %>
+
+<p>Hello <%= @resource.email %>!</p>
+
+<p>Your login code is:</p>
+
+<p><strong><%= @user.login_code %></strong></p>
+
+<p>You can also login using the magic link below:</p>
+
+<p><%= link_to "Log in to my account", magic_link_url(@resource, @scope_name => {email: @resource.email, token: @token, remember_me: true}) %></p>
+
+<p>Note that the link will expire in <%= Devise.passwordless_login_within.inspect %>.</p>          

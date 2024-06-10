@@ -1,0 +1,31 @@
+<% provide(:title, "Members") %>
+
+<% if user_signed_in? %>
+    <div class="border-b border-slate-300 flex-none font-bold p-5 lg:px-10 lg:py-5 text-xl w-full">
+        Members
+    </div>
+<% end %>
+
+<div class="flex flex-col space-y-10 <% if user_signed_in? %>lg:p-10<% end %>">
+    <% @users.each do |user| %>
+        <div class="border border-slate-200 bg-slate-100 p-10 rounded-lg w-full">
+            <div class="flex w-full">
+                <div class="flex flex-grow space-x-5">
+                    <div class="flex-none">
+                        <%= image_tag avatar_url_for(user), height: 100, width: 100, class: "border-4 border-slate-900 rounded-full" %>
+                    </div>
+                    <div class="flex flex-grow items-center justify-start">
+                        <div>
+                            <h5 class="font-header text-3xl text-slate-600">
+                                <%= link_to user.name, member_path(user.slug), class: "text-blue-900" %>
+                            </h5>
+                            <p class="flex font-bold space-x-2 text-lg">
+                                Joined <%= user.created_at.strftime("%B %d, %Y") %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

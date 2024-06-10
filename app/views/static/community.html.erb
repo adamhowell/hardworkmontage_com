@@ -1,0 +1,23 @@
+<% content_for :title, 'Jumpstart Pro Development' %>
+
+<div class="bg-purple-900 bg-center bg-contain mb-10 rounded-xl lg:m-0 lg:rounded-none" style="background-image: url(<%= image_url('bg_hero_community.png') %>);">
+  <div class="flex flex-col max-w-screen-xl mx-auto px-5 py-10 text-center md:mb-10 md:py-20">
+    <h1 class="font-black font-header leading-none my-5 text-4xl text-white uppercase md:text-6xl">
+      The Community
+    </h1>
+    <p class="text-white text-xl md:text-2xl">
+      Join the Hard Work Montage Campfire community and discuss indie commerce, Ruby on Rails, and more
+    </p>
+  </div>
+</div>
+
+<div class="bg-no-repeat bg-left bg-cover flex h-[30rem] items-center justify-center max-w-screen-lg mx-auto relative rounded-xl shadow-xl w-full lg:bg-contain lg:h-[45rem]"
+  style="background-image: url(<%= image_url('img_campfire_primary.png') %>);">
+  <div class="absolute flex inset-0 items-center justify-center rounded-xl z-10">
+    <div class="bg-black/25 p-10 px-6 rounded-xl">
+      <%= link_to "Join the community", "https://community.shipitsquirrel.com/join/tQNP-6bBV-rVpY", target: "_blank",
+        class: "bg-purple-500 font-black px-10 py-5 rounded-lg text-white text-2xl shadow-xl hover:text-white focus:text-white active:text-white" %>
+    </div>
+  </div>
+  <div class="absolute bg-black/25 inset-0 rounded-xl z-1"></div>
+</div>

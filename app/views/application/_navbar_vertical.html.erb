@@ -1,0 +1,46 @@
+<div class="border-r border-slate-300 flex flex-col flex-none h-screen overflow-y-scroll text-lg w-20">
+    <%= link_to root_path, class: "bg-slate-100 border-b border-slate-300 flex items-center justify-center p-5 w-full" do %>
+        <%= image_tag "logo_mark.svg", alt: "Hard Work Montage", class: "h-10" %>
+    <% end %>
+    <ul class="border-b border-slate-300 divide-y flex flex-col flex-grow list-none w-full">
+        <li data-controller="tooltip" data-tippy-content="Events" data-tippy-placement="right">
+            <%= link_to events_path, class: "flex font-bold items-center justify-center p-6 text-black w-full" do %>
+                <%= feather_icon "calendar", size: 25 %>
+            <% end %>
+        </li>
+        <li data-controller="tooltip" data-tippy-content="Members" data-tippy-placement="right">
+            <%= link_to members_path, class: "border-b border-slate-300 flex font-bold items-center justify-center p-6 text-black w-full" do %>
+                <%= feather_icon "users", size: 25 %>
+            <% end %>
+        </li>
+    </ul>
+    <ul class="divide-y flex flex-col list-none" class="flex-none">
+    <% if current_user.admin? %>
+        <li data-controller="tooltip" data-tippy-content="Admin" data-tippy-placement="right">
+            <%= link_to admin_root_url, class: "flex font-bold items-center justify-center p-6 text-black w-full" do %>
+                <%= feather_icon "lock", size: 25 %>
+            <% end %>
+        </li>
+    <% end %>
+        <li data-controller="tooltip" data-tippy-content="Notifications" data-tippy-placement="right">
+            <%= link_to notifications_path, class: "flex font-bold items-center justify-center p-6 text-black w-full" do %>
+                <%= feather_icon "bell", size: 25 %>
+            <% end %>
+        </li>
+        <li data-controller="tooltip" data-tippy-content="Contact" data-tippy-placement="right">
+            <%= link_to contacts_path, class: "flex font-bold items-center justify-center p-6 text-black w-full" do %>
+                <%= feather_icon "mail", size: 25 %>
+            <% end %>
+        </li>
+        <li data-controller="tooltip" data-tippy-content="Profile" data-tippy-placement="right">
+            <%= link_to edit_user_registration_path, class: "flex font-bold items-center justify-center p-6 text-black w-full" do %>
+                <%= image_tag avatar_url_for(current_user), class: "h-8 rounded-full" %>
+            <% end %>
+        </li>
+        <li data-controller="tooltip" data-tippy-content="Logout" data-tippy-placement="right">
+            <%= button_to destroy_user_session_path, method: :delete, class: "flex font-bold items-center justify-center p-6 text-black w-full" do %>
+                <%= feather_icon "log-out", size: 25 %>
+            <% end %>
+        </li>
+    </ul>
+</div>
