@@ -40,7 +40,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Raleway', ...defaultTheme.fontFamily.sans],
-        header: ['Bungee', 'Inter'],
+        header: ['Eveleth', 'Inter'],
       },
     },
   },

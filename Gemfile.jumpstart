@@ -62,7 +62,7 @@ gem "good_job" if Jumpstart.config.background_job_processor == "good_job"
 gem "solid_queue" if Jumpstart.config.background_job_processor == "solid_queue"
 
 # Payment processors
-gem "stripe", "~> 10.0" if Jumpstart.config.stripe?
+gem "stripe", "~> 11.0" if Jumpstart.config.stripe?
 gem "paddle", "~> 2.1" if Jumpstart.config.paddle_billing? || Jumpstart.config.paddle_classic?
 gem "braintree", "~> 4.15" if Jumpstart.config.braintree? || Jumpstart.config.paypal?
 
