@@ -30,9 +30,8 @@ Rails.application.routes.draw do
     get :terms
     get :privacy
     get :pricing
-    get :jumpstart_pro, path: "jumpstart-pro"
-    get :campfire
     get :companies
+    get :community
   end
 
   match "/404", via: :all, to: "errors#not_found"

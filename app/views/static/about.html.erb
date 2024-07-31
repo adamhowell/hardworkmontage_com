@@ -1,6 +1,6 @@
 <% content_for :title, 'About' %>
 
-<div class="bg-slate-900 bg-center bg-contain rounded-xl md:rounded-none" style="background-image: url(<%= image_url('bg_hero_about.png') %>);">
+<div class="bg-gray-900 bg-center bg-contain rounded-xl md:rounded-none" style="background-image: url(<%= image_url('bg_hero_about.png') %>);">
   <div class="flex flex-col max-w-screen-xl mx-auto px-5 py-10 text-center md:mb-10 md:py-20">
     <h1 class="font-black font-header leading-none my-5 text-4xl text-white uppercase md:text-6xl">
       About
@@ -12,9 +12,16 @@
 </div>
 
 <div class="flex flex-col-reverse max-w-screen-xl mx-auto pb-10 py-5 md:flex-row md:pb-20 md:py-10">
-  <div class="font-medium p-5 prose prose-lg md:p-0 md:pr-10 md:prose-xl md:w-1/2">
-    <p>Adam Howell is a husband, dad, creator, and entrepreneuer living in Charlotte, NC.</p>
-    <p>He is the owner of Hard Work Montage.</p>
+  <div class="font-medium p-5 prose prose-lg md:p-10 md:pt-5 md:pl-0 md:prose-xl md:w-2/3">
+    <h2 class="font-black font-header leading-none max-w-4xl my-2 text-2xl text-slate-900 md:mb-4 md:mt-2 md:text-5xl">
+      Adam Howell
+    </h2>
+    <p>
+      Adam is the founder and co-owner of Hard Work Montage.
+    </p>
+    <p>
+      He is also a husband, dad, creator, and entrepreneuer living in Charlotte, NC.
+    </p>
     <p>
       His work has appeared in 
       <a href="https://daringfireball.net/linked/2016/09/30/phoneys-ill-fated-tale" _target="blank">Daring Fireball</a>,
@@ -25,9 +32,27 @@
       <a href="https://www.newsweek.com/free-slackers-delight-117813" _target="blank">Newsweek</a>,
       and many more, plus he has appeared <a href="marketplace.mp3" _target="blank">as a guest on the NPR show Marketplace</a>.
     </p>
-    <p>You can connect with Adam on Bluesky, LinkedIn, <%= link_to "contact him here", contacts_path %>, or email him at adam at hwm dot llc.</p>
+    <p>You can connect with Adam on LinkedIn, <%= link_to "contact him here", contacts_path %>, or email him at adam at hwm dot llc.</p>
   </div>
-  <div class="flex items-start justify-center p-5 md:w-1/2">
-    <%= image_tag('img_mugshot.jpg', class: "rounded-xl shadow-xl max-w-96 w-full md:-mr-20") %>
+  <div class="flex items-start justify-center md:w-1/3">
+    <%= image_tag('img_mugshot.jpg', class: "rounded-xl shadow-xl w-96 md:w-full") %>
+  </div>
+</div>
+
+<div class="flex flex-col-reverse max-w-screen-xl mx-auto pb-10 py-5 md:flex-row md:pb-20 md:py-10">
+  <div class="flex items-start justify-center md:w-1/3">
+    <%= image_tag('img_stacey.jpg', class: "rounded-xl shadow-xl w-96 md:w-full") %>
+  </div>
+  <div class="font-medium p-5 prose prose-lg md:p-10 md:pt-5 md:prose-xl md:w-2/3">
+    <h2 class="font-black font-header leading-none max-w-4xl my-2 text-2xl text-slate-900 md:mb-4 md:mt-2 md:text-5xl">
+      Stacey Howell
+    </h2>
+    <p>
+      Stacey is a wife, mother, volunteer, voracious reader, and entrepreneuer living in Charlotte, NC.
+    </p>
+    <p>
+      She also works alongside Adam as a co-owner of Hard Work Montage.
+    </p>
+    <p>You can contact Stacey <%= link_to "here", contacts_path %>.</p>
   </div>
 </div>

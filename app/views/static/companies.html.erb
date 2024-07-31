@@ -1,6 +1,6 @@
 <% content_for :title, 'HWM Projects' %>
 
-<div class="bg-blue-900 bg-center bg-contain mb-10 rounded-xl lg:m-0 lg:rounded-none"
+<div class="bg-gray-900 bg-center bg-contain mb-10 rounded-xl lg:m-0 lg:rounded-none"
   style="background-image: url(<%= image_url('bg_hero_projects.png') %>);">
   <div class="flex flex-col max-w-screen-xl mx-auto px-5 py-10 text-center md:mb-10 md:py-20">
     <h1 class="font-black font-header leading-none my-5 text-4xl text-white uppercase md:text-6xl">
@@ -14,48 +14,57 @@
 
 <div class="flex flex-col-reverse max-w-screen-xl mx-auto py-5 md:flex-row md:pb-20 md:py-10" id="tam">
   <div class="font-medium prose prose-lg p-5 md:prose-xl md:p-0 md:px-10 md:w-1/2">
-    <div class="font-black text-slate-500 text-xl uppercase md:text-2xl">
+    <div class="font-medium mb-3 text-slate-500 text-base uppercase md:text-xl">
       E-commerce
     </div>
-    <h2 class="font-black font-header leading-none max-w-4xl my-2 text-2xl text-slate-900 md:mb-4 md:mt-2 md:text-5xl">
+    <h2 class="font-black font-header leading-none max-w-4xl my-3 text-2xl text-slate-900 md:mb-4 md:mt-2 md:text-5xl">
       The Achieve Mint
     </h2>
-    <p><strong>The Achieve Mint started in 2020 with just 3 coins – One Year Sober, Two Years Sober and Three Years Sober – and one goal: to make modern, colorful sobriety coins that people would be proud to buy for themselves or as a gift for a loved one.</strong></p>
-
-    <p>Today, after three years and 10,000+ coins sold, there are now over 70+ products for sale – from One Month Sober all the way through to 20 Years Sober (with more coming every month) – and The Achieve Mint Etsy store has 650+ 5-star reviews, Amazon store has 100+ 5-star reviews, and there is a strong community of good vibes from people all across the world celebrating their – or their friend’s and family’s – “soberversary” in style.</p>
-
+    <p class="leading-normal">
+      <strong>The Achieve Mint started in 2020 with just 3 coins – One Year Sober, Two Years Sober and Three Years Sober –
+      and one goal: to make modern, colorful sobriety coins that people would be proud to buy for themselves or as a gift for
+      a loved one.</strong>
+    </p>
+    <p class="leading-normal">
+      Today, after three years and 10,000+ coins sold, there are now over 70+ products for sale – from One Month Sober all the
+      way through to 20 Years Sober (with more coming every month) – and The Achieve Mint Etsy store has 650+ 5-star reviews, Amazon
+      store has 100+ 5-star reviews, and there is a strong community of good vibes from people all across the world celebrating their
+      – or their friend’s and family’s – “soberversary” in style.
+    </p>
     <div class="pt-5">
       <%= link_to "Visit TheAchieveMint.com", "https://theachievemint.com", target: "_blank",
-        class: "bg-blue-900 block font-black px-5 md:px-10 py-5 rounded-lg text-white text-lg no-underline w-full md:inline md:w-fit md:text-2xl hover:text-white focus:text-white active:text-white" %>
+        class: "bg-gray-900 block font-black px-5 md:px-10 py-5 rounded-lg text-white text-lg no-underline w-full md:inline md:w-fit md:text-2xl hover:text-white focus:text-white active:text-white" %>
     </div>
   </div>
   <div class="flex items-start px-5 md:w-1/2">
-    <%= image_tag('img_projects_tam.png', class: "rounded-xl shadow-xl w-full md:-mr-20") %>
+    <%= image_tag('img_companies_tam.png', class: "rounded-xl shadow-xl w-full md:-mr-20") %>
   </div>
 </div>
 
 <div class="bg-slate-100 rounded-xl md:py-16 md:rounded-none" id="ts">
   <div class="flex flex-col max-w-screen-xl mx-auto py-5 md:flex-row md:pb-20 md:py-10">
     <div class="flex items-start md:w-1/2">
-      <%= image_tag('img_teamstreak.png', class: "w-full md:-ml-20") %>
+      <%= image_tag('img_companies_cd.png', class: "rounded-xl shadow-xl w-full md:-ml-20") %>
     </div>
     <div class="font-medium prose prose-lg p-5 md:prose-xl md:p-0 md:px-10 md:w-1/2">
-      <div class="font-black text-slate-500 text-xl uppercase md:text-2xl">
-        Software as a Service
+      <div class="font-medium mb-3 text-slate-500 text-lg uppercase md:text-xl">
+        E-commerce
       </div>
-      <h2 class="font-black font-header leading-none max-w-4xl my-2 text-2xl text-slate-900 md:mb-4 md:mt-2 md:text-5xl">
-        TeamStreak
+      <h2 class="font-black font-header leading-none max-w-4xl my-3 text-2xl text-slate-900 md:mb-4 md:mt-2 md:text-5xl">
+        Coin Designer
       </h2>
 
-      <p><strong>TeamStreak is the best way to privately track goals and habits with your clients, students, coworkers, and more.</strong></p>
+      <p class="leading-normal">
+        <strong>Coin Designer launched with a simple mission: to empower individuals and organizations to create personalized coins for any occasion in just a few clicks.</strong>
+      </p>
 
-      <p>TeamStreak is a private online “accountability community” that helps its members with accountability to both themselves and others. Either 1-on-1 with a professional or in a private group.</p>
-
-      <p>A place where people could share their progress, get encouragement, and celebrate their wins.</p>
+      <p class="leading-normal">
+        From corporate events and company milestones to personal celebrations, Coin Designer offers an intuitive platform that makes custom coin design accessible and fun.
+      </p>
 
       <div class="pt-5">
-        <%= link_to "Visit TeamStreak.com", "https://teamstreak.com", target: "_blank",
-          class: "bg-blue-900 block font-black px-5 md:px-10 py-5 rounded-lg text-white text-lg no-underline w-full md:inline md:w-fit md:text-2xl hover:text-white focus:text-white active:text-white" %>
+        <%= link_to "Visit CoinDesigner.com", "https://coindesigner.com", target: "_blank",
+          class: "bg-gray-900 block font-black px-5 md:px-10 py-5 rounded-lg text-white text-lg no-underline w-full md:inline md:w-fit md:text-2xl hover:text-white focus:text-white active:text-white" %>
       </div>
     </div>
   </div>
