@@ -1,16 +1,17 @@
 <%# Place any links for the RIGHT side of the nav bar here. Be sure to add class: "nav-link" to each item for proper spacing. %>
+<div class="pt-5">
+    <%= nav_link_to companies_path, class: "flex nav-link space-x-2" do %>
+        <span class="inline md:hidden">🚀</span>
+        <span>Companies</span>
+    <% end %>
 
-<%= nav_link_to companies_path, class: "flex nav-link space-x-2" do %>
-    <span class="inline md:hidden">💬</span>
-    <span>Companies</span>
-<% end %>
+    <%= nav_link_to about_path, class: "flex nav-link space-x-2" do %>
+        <span class="inline md:hidden">👋</span>
+        <span>About</span>
+    <% end %>
 
-<%= nav_link_to about_path, class: "flex nav-link space-x-2" do %>
-    <span class="inline md:hidden">👋</span>
-    <span>About</span>
-<% end %>
-
-<%= nav_link_to contacts_path, class: "flex nav-link space-x-2" do %>
-    <span class="inline md:hidden">📫</span>
-    <span>Contact</span>
-<% end %>
+    <%= nav_link_to contacts_path, class: "flex nav-link space-x-2" do %>
+        <span class="inline md:hidden">📫</span>
+        <span>Contact</span>
+    <% end %>
+</div>
