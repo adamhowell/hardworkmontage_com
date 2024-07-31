@@ -1,6 +1,6 @@
 <%= form_with model: @config, url: config_path do |f| %>
   <div data-controller="tabs" data-tabs-update-anchor-value="true" class="flex">
-    <div class="sticky top-0 w-full px-4 pt-4 md:w-1/5 md:max-w-[300px] lg:px-8">
+    <div class="sticky top-0 w-full px-4 pt-4 md:w-1/5 md:max-w-[300px] md:px-8">
       <%= link_to root_path, class: "block" do %>
         <%= inline_svg_tag "jumpstart.svg", title: "Logo", aria: true, class: "fill-current text-slate-800" %>
       <% end %>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="flex flex-col w-full h-full bg-white border-l border-slate-200 md:w-4/5 docs-main">
-      <div class="px-4 pt-4 md:px-20 lg:px-40 xl:px-56">
+      <div class="px-4 pt-4 md:px-20 md:px-40 xl:px-56">
         <div class="mb-4">
           <%= render "flash" %>
         </div>

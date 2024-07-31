@@ -1,16 +1,16 @@
-<div class="flex flex-wrap max-w-screen-xl mx-auto my-4 lg:px-4">
-  <div class="w-full mb-4 lg:w-1/4 lg:p-4">
+<div class="flex flex-wrap max-w-screen-xl mx-auto my-4 md:px-4">
+  <div class="w-full mb-4 md:w-1/4 md:p-4">
     <%= render partial: "account_navbar" %>
   </div>
 
-  <div class="w-full lg:w-3/4 lg:p-4">
-    <div class="p-4 bg-white border border-slate-200 rounded-lg lg:p-10">
+  <div class="w-full md:w-3/4 md:p-4">
+    <div class="p-4 bg-white border border-slate-200 rounded-lg md:p-10">
       <h1 class="h3 mb-4"><%= t('.title', resource: resource.model_name.human) %></h1>
 
       <%= form_with(model: resource, as: resource_name, url: registration_path(resource_name), method: :put, class: "mb-16", html: {data: {controller: "bridge--form", action: "turbo:submit-start->bridge--form#submitStart turbo:submit-end->bridge--form#submitEnd"}}) do |form| %>
         <%= render "error_messages", resource: resource %>
         <div class="flex flex-wrap items-start justify-between">
-          <div class="w-full lg:w-1/2">
+          <div class="w-full md:w-1/2">
             <div class="form-group">
               <%= form.label :name, "Full name" %>
               <%= form.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Steve Jobs", class: "form-control" %>
@@ -45,7 +45,7 @@
             -->
           </div>
 
-          <div class="w-full lg:pl-16 lg:w-1/2">
+          <div class="w-full md:pl-16 md:w-1/2">
             <div class="flex items-center gap-4">
               <%= image_tag avatar_url_for(form.object), class: "rounded-full" %>
               <div>

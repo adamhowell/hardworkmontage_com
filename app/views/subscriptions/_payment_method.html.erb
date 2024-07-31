@@ -1,6 +1,6 @@
 <h5 class="text-slate-700 font-semibold my-4 border-b border-slate-200 pb-2"><%= t(".payment_method") %></h5>
 
-<div class="mb-8 lg:flex lg:gap-8">
+<div class="mb-8 md:flex md:gap-8">
   <div class="flex-1 my-4">
     <% if (payment_method = payment_processor&.default_payment_method) %>
       <i class="fab fa-cc-<%= payment_method.brand&.downcase %> text-slate-700"></i>

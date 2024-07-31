@@ -13,8 +13,8 @@
 
 <div class="divide-y divide-solid max-w-screen-lg mx-auto w-full">
     <% @articles.each do |article| %>
-        <div class="mb-5 mx-auto py-10 prose lg:prose-lg lg:prose-xl text-slate-800">
-            <h3 class="text-2xl lg:text-4xl font-bold">
+        <div class="mb-5 mx-auto py-10 prose md:prose-lg md:prose-xl text-slate-800">
+            <h3 class="text-2xl md:text-4xl font-bold">
                 <%= link_to article.title, article, class: "font-black text-black no-underline hover:text-black" %>
             </h3>
             <p class="text-sm">

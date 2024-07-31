@@ -7,14 +7,14 @@
 
 <% if Jumpstart.config.stripe? %>
   <div class="my-10 max-w-screen-4xl mx-auto w-full">
-    <h1 class="mb-4 lg:mb-8 text-center"><%= t(".title") %></h1>
+    <h1 class="mb-4 md:mb-8 text-center"><%= t(".title") %></h1>
     <%= render "subscriptions/forms/stripe", client_secret: @checkout_session.client_secret %>
     <%= render "subscriptions/new/testimonial" %>
   </div>
 <% else %>
-  <div class="p-4 max-w-6xl mx-auto grid lg:grid-cols-2 lg:gap-48 lg:py-24">
+  <div class="p-4 max-w-6xl mx-auto grid md:grid-cols-2 md:gap-48 md:py-24">
     <div>
-      <div class="flex justify-center mb-4 lg:justify-start">
+      <div class="flex justify-center mb-4 md:justify-start">
         <% if @plan.has_trial? %>
           <div>
             <h1 class="font-semibold text-lg text-slate-500">Try <%= @plan.name %></h1>
@@ -70,7 +70,7 @@
         </div>
       <% end %>
 
-      <div class="hidden flex justify-center mb-4 lg:block">
+      <div class="hidden flex justify-center mb-4 md:block">
         <div>
           <% @plan.features.each do |plan_feature| %>
             <div class="flex mb-2 text-slate-500">
@@ -87,7 +87,7 @@
     </div>
 
     <div>
-      <h1 class="hidden h3 mb-4 lg:block"><%= t(".title") %></h1>
+      <h1 class="hidden h3 mb-4 md:block"><%= t(".title") %></h1>
 
       <h5 id="billing-address" class="text-slate-700 font-semibold my-4 border-b border-slate-200 pb-2"><%= t(".account") %></h5>
       <div class="flex items-center mb-8">

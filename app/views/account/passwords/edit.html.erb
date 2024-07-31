@@ -1,10 +1,10 @@
-<div class="flex flex-wrap max-w-screen-xl mx-auto my-4 lg:px-4">
-  <div class="w-full mb-4 lg:w-1/4 lg:p-4">
+<div class="flex flex-wrap max-w-screen-xl mx-auto my-4 md:px-4">
+  <div class="w-full mb-4 md:w-1/4 md:p-4">
     <%= render partial: "account_navbar" %>
   </div>
 
-  <div class="w-full lg:w-3/4 lg:p-4">
-    <div class="lg:p-10 p-4 bg-white rounded-lg border border-slate-200">
+  <div class="w-full md:w-3/4 md:p-4">
+    <div class="md:p-10 p-4 bg-white rounded-lg border border-slate-200">
       <h1 class="h3 mb-4"><%= t(".update_password") %></h1>
       <%= form_with(model: current_user, url: account_password_path, local: true, html: { method: :put }, class: "max-w-lg") do |f| %>
         <%= render "error_messages", resource: current_user %>
@@ -34,7 +34,7 @@
       <% end %>
     </div>
 
-    <div class="lg:p-10 mt-4 p-4 bg-white rounded-lg border border-slate-200">
+    <div class="md:p-10 mt-4 p-4 bg-white rounded-lg border border-slate-200">
       <h2 class="h3"><%= t(".two_factor.header") %></h2>
       <p class="mb-4 text-slate-500"><%= t(".two_factor.description") %></p>
       <% if current_user.otp_required_for_login? %>
