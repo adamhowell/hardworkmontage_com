@@ -19,6 +19,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <style>
+      @font-face {
+        font-family: 'Eveleth';
+        src: url('<%= asset_path('fonts/Eveleth-Regular.otf') %>') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
     <meta name="turbo-cache-control" content="no-preview">
     <%= yield :head %>
   </head>

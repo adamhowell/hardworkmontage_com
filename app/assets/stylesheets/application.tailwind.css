@@ -91,13 +91,3 @@
   .carousel-slide {
     display: none; /* Hide all slides by default */
   }
-
-  /* Eveleth */
-  
-  @font-face {
-    font-family: 'Eveleth';
-    src: url('/assets/fonts/Eveleth-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
