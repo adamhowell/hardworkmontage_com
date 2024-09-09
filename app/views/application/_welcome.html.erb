@@ -1,16 +1,20 @@
 <% content_for :title, 'We build and buy small creative internet businesses' %>
 
-<div class="bg-center bg-cover h-96 px-20 py-28 md:py-96" style="background-image: url('<%= image_url('bg_hero.jpg') %>')">
-  
+<!--  Desktop -->
+<div class="bg-center bg-cover h-96 hidden px-20 py-28 md:block md:py-96" style="background-image: url('<%= image_url('bg_hero_desktop.jpg') %>')">
+</div>
+
+<!--  Mobile -->
+<div class="bg-center bg-contain block h-80 md:hidden" style="background-image: url('<%= image_url('bg_hero_mobile.jpg') %>')">
 </div>
 
 <div class="bg-gray-50">
-  <div class="pt-20 text-center">
+  <div class="pt-12 md:pt-20 text-center">
     <h2 class="font-black font-header text-gray-800 text-3xl uppercase md:text-5xl">
       <strong>About HWM</strong>
     </h2>
   </div>
-  <div class="max-w-screen-xl mx-auto pb-5 pt-10 md:pb-20 md:px-5">
+  <div class="max-w-screen-xl mx-auto pb-5 pt-6 md:pt-10 md:pb-20 md:px-5">
     <p class="text-xl md:px-10 md:text-3xl">
       Hard Work Montage is a holding company based in Charlotte, NC that builds and buys e-commerce, SaaS, content, community, and other internet businesses.
       It is owned and operated by Adam and Stacey Howell.
